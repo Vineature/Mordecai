@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Mordecai.Types
 {
-    class Weapon
+    public class Weapon : IThing
     {
+        public int Id { get; set; }
+        public string Description { get; set; }
     }
 }
