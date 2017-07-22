@@ -10,5 +10,14 @@ namespace Mordecai.Types
     {
         public int Id { get; set; }
         public string Description { get; set; }
+        public IPlace Location { get; set; }
+        public IPlace Destination { get; set; }
+        public IContainer Container { get; set; }
+
+        public virtual void Enter(IThing thing)
+        {
+            Location.Leave(thing);
+            Destination.Enter(thing);
+        }
     }
 }
