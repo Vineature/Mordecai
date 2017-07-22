@@ -42,10 +42,13 @@
   <ItemGroup>
     <Compile Include="Armor.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="Door.cs" />
     <Compile Include="Exit.cs" />
     <Compile Include="Food.cs" />
+    <Compile Include="IContainer.cs" />
     <Compile Include="IItem.cs" />
     <Compile Include="INPC.cs" />
+    <Compile Include="IPlace.cs" />
     <Compile Include="IThing.cs" />
     <Compile Include="Place.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

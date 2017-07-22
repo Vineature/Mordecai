@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Mordecai.Types
 {
-    public interface IThing
+    public interface IPlace
     {
         int Id { get; set; }
+        string ShortDescription { get; set; }
         string Description { get; set; }
-        IPlace Location { get; set; }
-        IContainer Container { get; set; }
+        void Leave(IThing thing);
+        void Enter(IThing thing);
     }
 }
