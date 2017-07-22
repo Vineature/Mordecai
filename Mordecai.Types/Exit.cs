@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Mordecai.Types
 {
-    class Exit
+    public class Exit : IThing
     {
+        public int Id { get; set; }
+        public string Description { get; set; }
     }
 }
