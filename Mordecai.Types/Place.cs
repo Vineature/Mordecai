@@ -23,6 +23,7 @@ namespace Mordecai.Types
         public void Leave(IThing thing)
         {
             ThingsPresent.Remove(thing);
+            thing.Location = null;
             // TODO: notify other things that this thing left
         }
 
