@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mordecai.Types
 {
-    public interface IItem
+    public interface IItem : IThing
     {
         int Weight { get; set; }
     }

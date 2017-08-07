@@ -10,6 +10,8 @@ namespace Mordecai.Types
     {
         int Id { get; set; }
         string ShortDescription { get; set; }
+        List<IThing> ThingsPresent { get; }
+        List<Exit>  Exits { get; }
         string Description { get; set; }
         void Leave(IThing thing);
         void Enter(IThing thing);

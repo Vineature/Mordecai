@@ -13,7 +13,8 @@ namespace Mordecai.Types
         public string Description { get; set; }
         public int EncounterChance { get; set; }
         public string StateChange { get; set; }
-        public List<IThing> ThingsPresent { get; set; }
+        public List<Exit> Exits { get; }
+        public List<IThing> ThingsPresent { get; private set; }
 
         public Place()
         {

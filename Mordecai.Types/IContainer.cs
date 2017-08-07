@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Mordecai.Types
 {
-    public interface IContainer
+    public interface IContainer : IThing
     {
-        List<IThing> Items { get; set; }
+        List<IItem> Items { get; }
+        void RemoveItem(IItem item);
+        void AddItem(IItem item);
     }
 }
