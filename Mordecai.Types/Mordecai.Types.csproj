@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Armor.cs" />
+    <Compile Include="Backpack.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Chest.cs" />
     <Compile Include="Door.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="IThing.cs" />
     <Compile Include="Place.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TwoWayExit.cs" />
     <Compile Include="Weapon.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

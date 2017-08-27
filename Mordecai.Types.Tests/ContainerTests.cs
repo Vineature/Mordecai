@@ -21,7 +21,7 @@ namespace Mordecai.Types.Tests
             chest.AddItem(item);
             Assert.AreEqual(1, chest.Items.Count, "count here");
             Assert.AreEqual(42, chest.Items[0].Id, "Id here");
-            Assert.ReferenceEquals(this, item.Location);
+            Assert.AreEqual(item.Container, chest);
         }
         [TestMethod]
         public void RemoveItemFromChest()
@@ -32,7 +32,17 @@ namespace Mordecai.Types.Tests
             chest.AddItem(item);
             chest.RemoveItem(item);
             Assert.AreEqual(0, chest.Items.Count, "count here");
-            Assert.IsNull(item.Location);
+        }
+        [TestMethod]
+        public void AddBackpackToBackpack()
+        {
+            var backpack = new Backpack();
+            var backpack2 = new Backpack();
+            backpack2.Id = 42;
+            backpack.AddItem(backpack2);
+            Assert.AreEqual(1, backpack.Items.Count, "count here");
+            Assert.AreEqual(42, backpack.Items[0].Id, "Id here");
+            Assert.AreEqual(backpack2.Container, backpack);
         }
     }
 }

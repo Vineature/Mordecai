@@ -9,5 +9,7 @@ namespace Mordecai.Types
     public interface IItem : IThing
     {
         int Weight { get; set; }
+        IContainer Container { get; set; }
+        void SetLocationtoContainer(IContainer container)
     }
 }

@@ -10,7 +10,6 @@ namespace Mordecai.Types
     {
         int Id { get; set; }
         string Description { get; set; }
-        IPlace Location { get; set; }
-        IContainer Container { get; set; }
+        Place Location { get; set; }
     }
 }
