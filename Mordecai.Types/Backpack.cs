@@ -27,10 +27,7 @@ namespace Mordecai.Types
         {
             Items.Add(item);
             item.Container = this;
-        }
-        public void SetLocationtoContainer(IContainer container)
-        {
-            this.Location = container.Location;
+            item.Location = null;
         }
     }
 }

@@ -13,9 +13,5 @@ namespace Mordecai.Types
         public int Weight { get; set; }
         public Place Location { get; set; }
         public IContainer Container { get; set; }
-        public void SetLocationtoContainer(IContainer container)
-        {
-            this.Location = container.Location;
-        }
     }
 }

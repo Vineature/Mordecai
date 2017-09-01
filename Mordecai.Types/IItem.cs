@@ -10,6 +10,5 @@ namespace Mordecai.Types
     {
         int Weight { get; set; }
         IContainer Container { get; set; }
-        void SetLocationtoContainer(IContainer container)
     }
 }

@@ -64,7 +64,8 @@ namespace Mordecai.Types.Tests
             chest.AddItem(weapon);
             chest.RemoveItem(weapon);
             Assert.AreEqual(0, chest.Items.Count, "count here");
-            Assert.IsNull(weapon.Location);
+            Assert.IsNull(weapon.Container, "weapon is not in a container");
+            Assert.AreEqual(weapon.Location, chest.Location, "locations are equal");
         }
     }
 }

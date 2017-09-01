@@ -45,6 +45,7 @@ namespace Mordecai.Types.Tests
             weapon.Id = 7;
             exit.Location = place1;
             exit.Destination = place2;
+            backpack.Location = exit.Location;
             character.Location = exit.Location;
             character.AddItem(backpack);
             backpack.AddItem(weapon);
@@ -55,9 +56,9 @@ namespace Mordecai.Types.Tests
             Assert.AreEqual(1, backpack.Items.Count, "count here");
             Assert.AreEqual(7, backpack.Items[0].Id, "Id here");
             Assert.AreEqual(weapon.Container, backpack);
-            Assert.AreEqual(weapon.Location, backpack.Location, "compare locations between backpack and weapon");
-            Assert.AreEqual(weapon.Location, character.Location, "compare locations between character, backpack, and weapon");
-
+            Assert.AreEqual(character.Location, exit.Destination, "After exit");
+            Assert.IsNull(backpack.Location);
+            Assert.IsNull(weapon.Location);
         }
     }
 }

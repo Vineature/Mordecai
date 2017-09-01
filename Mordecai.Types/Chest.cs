@@ -19,12 +19,14 @@ namespace Mordecai.Types
         public void RemoveItem(IItem item)
         {
             Items.Remove(item);
-            item.Location = null;
+            item.Container = null;
+            item.Location = this.Location;
         }
         public void AddItem (IItem item)
         {
             Items.Add(item);
             item.Container = this;
+            item.Location = null;
         }
     }
 }

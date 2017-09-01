@@ -8,7 +8,7 @@ namespace Mordecai.Types
 {
     public class Character : IThing, IContainer
     {
-        public List<IItem> Items { get; }        
+        public List<IItem> Items { get; set; }        
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -18,6 +18,10 @@ namespace Mordecai.Types
         public string Race { get; set; }
         public int SkillPoints { get; set; }
         public int MagicPoints { get; set; }
+        public Character()
+        {
+            Items = new List<IItem>();
+        }
         public void UseExit(Exit exit)
         {
             exit.Enter(this);
@@ -25,13 +29,14 @@ namespace Mordecai.Types
         public void RemoveItem(IItem item)
         {
             Items.Remove(item);
-            item.Location = null;
+            item.Container = null;
+            item.Location = this.Location;
         }
         public void AddItem(IItem item)
         {
             Items.Add(item);
             item.Container = this;
-            item.SetLocationtoContainer(this);
+            item.Location = null;
         }
     }
 }
