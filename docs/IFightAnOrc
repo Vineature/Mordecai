@@ -25,4 +25,6 @@ You swing your sword at the Orc! Your sword hits dealing 7 damage!
 
 The Orc falls dead.
 
+## Notes
+
 * With background cooldown times, if the player is using a short-sword they should be able to attack multiple times in the span of the orc attacking once. The orc should do more damage per swing at the cost of less attacks.
