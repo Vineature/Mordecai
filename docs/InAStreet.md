@@ -18,4 +18,4 @@ You are in a small neighborhood.
 
 * Also the input n or north or go to north should all work as well
 
-* Cooldown for move between rooms. Players can choose to walk, jog, or run. Players who run get exhausted but have a super short cooldown to leave the room?
+* Cooldown for move between rooms. Players can choose to walk, jog, or run. Players who run get exhausted but have a super short cooldown to leave the room? (Have exhaust and dexhaust methods that affect character attributes such as strenth and fatigue.)
